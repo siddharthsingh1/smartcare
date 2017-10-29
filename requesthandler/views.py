@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 import json
 from django.views.decorators.csrf import csrf_exempt
-from models import patient_data , patient_medicines
+from requesthandler.models import patient_data , patient_medicines
 from django.shortcuts import render
 from twilio.rest import Client
 from django.shortcuts import render
