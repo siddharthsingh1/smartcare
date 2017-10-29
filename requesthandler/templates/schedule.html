@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Bootstrap Example</title>
+    <meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="CSS/Schedule.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			  <ul class="nav navbar-nav">
+		      <li><a href="Home.html">Home</a></li>
+		      <li class="active"><a href="Schedule.html">Schedules</a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class="container" id="tabledive">
+			<table class="table table-striped">
+			    <thead>
+			      <tr>
+			        <th>Name of medicine</th>
+			        <th>Dose</th>
+			        <th>Time</th>
+			        <th>Color</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+
+					  {% for schedule in stu %}
+						  <tr>
+							  <td>{{ schedule.name }}</td>
+							  <td>{{ schedule.dose }}</td>
+							  <td>{{ schedule.time }}</td>
+							  <td>{{ schedule.color }}</td>
+							  <td id="device_id" hidden>{{ schedule.device_id }}</td>
+
+
+						  </tr>
+					  {% endfor %}
+			        <td><a href="/requesthandler/addprescription/?device_id={{ x }}">Edit</a></td>
+
+
+			    </tbody>
+  			</table>
+		</div>
+		
+	</body>
+
+</html>
