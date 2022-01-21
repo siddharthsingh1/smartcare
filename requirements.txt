@@ -16,7 +16,7 @@ docutils==0.14
 enum34==1.1.6
 idna==2.6
 ipaddress==1.0.18
-ipython==5.1.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 jmespath==0.9.3
 keyring==10.4.0
